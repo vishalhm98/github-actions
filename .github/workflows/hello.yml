@@ -3,9 +3,10 @@ name: Hello
 
 #runs on an automatic trigger, whenever changes are pushed to the main branch (Deployment)
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: 
+#  push:
+#    branches:
+ #     - main
 #this is the name of the job
 jobs:
   greet:
