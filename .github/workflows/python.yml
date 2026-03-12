@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        run: echo"code fetched"
+        run: echo "code fetched"
       - name: Show Python version
         run: python -- version
       
