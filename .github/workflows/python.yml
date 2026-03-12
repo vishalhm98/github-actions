@@ -1,0 +1,22 @@
+#name of workflow
+name: Run Python
+
+#runs on automatic trigger
+on:
+  push:
+    branches:
+      - main
+#this name of the job
+jobs:
+  run-Python:
+    # This GitHub runner runs Son runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: checkout@v3
+      - name: Setup Python
+        run: setup-python@v4
+        with:
+          pythom-version: "3.10"
+      - name: Run Python script
+        run: python app.py
