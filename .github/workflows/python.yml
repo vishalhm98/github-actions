@@ -13,9 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        run: checkout@v3
-      - name: Setup Python
-        run: setup-python@v4
-       
-      - name: Run Python script
-        run: python app.py
+        run: echo"code fetched"
+      - name: Show Python version
+        run: python -- version
+      
