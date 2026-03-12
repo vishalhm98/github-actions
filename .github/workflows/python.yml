@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-#this name of the job
+#this is the name of the job
 jobs:
   run-Python:
     # This GitHub runner runs Son runner
@@ -16,7 +16,6 @@ jobs:
         run: checkout@v3
       - name: Setup Python
         run: setup-python@v4
-        with:
-          pythom-version: "3.10"
+       
       - name: Run Python script
         run: python app.py
