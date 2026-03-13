@@ -3,10 +3,20 @@ name: Hello
 
 #runs on an automatic trigger, whenever changes are pushed to the main branch (Deployment)
 on:
-  workflow_dispatch: 
-#  push:
-#    branches:
- #     - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: This is the environment where the workflow runs
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
+  #push:
+   # branches:
+    #  - main
 #this is the name of the job
 jobs:
   greet:
